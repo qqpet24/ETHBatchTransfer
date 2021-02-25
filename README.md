@@ -12,7 +12,7 @@ values:uint256数组，传入每个地址要转多少，这个数组长度和to�
 隐含参数value:转给合约的ETH数量，这个数量最好等于values数组和，否则合约会退还剩余ETH，导致消耗无谓的GAS
 GAS消耗预计：
 转账给10个新地址 350000左右
-转账给10个有ETH地址 110000左右
+转账给10个有ETH地址 110000左右  
 function batchTransferErc20(address erc20Address,address payable[] memory to,uint256[] memory values) public	批量转账ERC20代币给地址，请注意，使用前需要去ERC20代币合约approve本合约，本交易会转账ERC20代币给合约，合约再转账给小号，转移数量为values数组求和。
 erc20Address：ERC20代币地址
 to:地址数组，传入要转账给谁的地址
